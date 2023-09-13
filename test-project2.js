@@ -27,7 +27,7 @@ let varDeclared = ['varDeclared', 'p1Message', 'p2Message', 'p3Message'];
     }
   }
   return true;
-})();
+});
 
 // ********************* Test MakeMultiFilter
 
