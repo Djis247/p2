@@ -17,7 +17,7 @@ let p3Message = 'SUCCESS';
 let varDeclared = ['varDeclared', 'p1Message', 'p2Message', 'p3Message'];
 
 // Utility functions
-(function arraysAreTheSame(a1, a2) {
+function arraysAreTheSame(a1, a2) {
   if (!Array.isArray(a1) || !Array.isArray(a2) || (a1.length !== a2.length)) {
     return false;
   }
@@ -27,7 +27,7 @@ let varDeclared = ['varDeclared', 'p1Message', 'p2Message', 'p3Message'];
     }
   }
   return true;
-});
+};
 
 // ********************* Test MakeMultiFilter
 
