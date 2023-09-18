@@ -14,7 +14,7 @@ let p2Message = 'SUCCESS';
 let p3Message = 'SUCCESS';
 
 // Keep track of all the var statements
-let varDeclared = ['varDeclared', 'p1Message', 'p2Message', 'p3Message'];
+const varDeclared = ['varDeclared', 'p1Message', 'p2Message', 'p3Message'];
 
 // Utility functions
 function arraysAreTheSame(a1, a2) {
@@ -27,7 +27,7 @@ function arraysAreTheSame(a1, a2) {
     }
   }
   return true;
-};
+}
 
 // ********************* Test MakeMultiFilter
 
@@ -35,11 +35,11 @@ if (typeof MakeMultiFilter !== 'function') {
   console.error('MakeMultiFilter is not a function', typeof MakeMultiFilter);
   p1Message = 'FAILURE';
 } else {
-  let originalArray = [1, 2, 3];
-  let filterFunc = window.MakeMultiFilter(originalArray);
+  const originalArray = [1, 2, 3];
+  const filterFunc = window.MakeMultiFilter(originalArray);
 
-  let secondArray = [1, 2, 3, 4];
-  let filterFuncTwo = window.MakeMultiFilter(secondArray);
+  const secondArray = [1, 2, 3, 4];
+  const filterFuncTwo = window.MakeMultiFilter(secondArray);
 
   if (typeof filterFunc !== 'function') {
     console.error('MakeMultiFilter does not return a function', filterFunc);
@@ -111,11 +111,11 @@ if (typeof TemplateProcessor !== 'function') {
   console.error('TemplateProcessor is not a function', typeof TemplateProcessor);
   p2Message = 'FAILURE';
 } else {
-  let template = 'My favorite month is {{month}} but not the day {{day}} or the year {{year}}';
-  let dateTemplate = new TemplateProcessor(template);
+  const template = 'My favorite month is {{month}} but not the day {{day}} or the year {{year}}';
+  const dateTemplate = new TemplateProcessor(template);
 
-  let dictionary = { month: 'July', day: '1', year: '2016' };
-  let str = dateTemplate.fillIn(dictionary);
+  const dictionary = { month: 'July', day: '1', year: '2016' };
+  const str = dateTemplate.fillIn(dictionary);
 
   if (str !== 'My favorite month is July but not the day 1 or the year 2016') {
     console.error('TemplateProcessor didn\'t work');
